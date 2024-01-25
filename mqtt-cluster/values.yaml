@@ -12,6 +12,10 @@ replicant:
       cpu: 250m
       memory: 1Gi
 
-serviceTypes:
-  dashboard: LoadBalancer
-  listener: LoadBalancer
+service:
+  dashboard:
+    spec:
+      type: LoadBalancer
+  listeners:
+    spec:
+      type: LoadBalancer

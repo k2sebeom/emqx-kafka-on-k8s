@@ -12,12 +12,12 @@ spec:
 {{ toYaml .Values.core.resources | indent 8 }}
   replicantTemplate:
     spec:
-      replicas: 7
+      replicas: {{ .Values.replicant.replicas }}
       resources:
 {{ toYaml .Values.replicant.resources | indent 8 }}
   dashboardServiceTemplate:
     spec:
-      type: {{ .Values.serviceTypes.dashboard }}
+{{ toYaml .Values.service.dashboard.spec | indent 6 }}
   listenersServiceTemplate:
     spec:
-      type: {{ .Values.serviceTypes.listener }}
+{{ toYaml .Values.service.listeners.spec | indent 6 }}
