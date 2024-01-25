@@ -1,0 +1,14 @@
+apiVersion: v2
+name: operators
+description: A Helm chart for operators
+
+type: application
+
+version: 0.1.0
+
+appVersion: "1.16.0"
+
+dependencies:
+  - name: emqx-operator
+    repository: https://repos.emqx.io/charts
+    version: 2.2.14

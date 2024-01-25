@@ -1,0 +1,17 @@
+core:
+  replicas: 3
+  resources:
+    requests:
+      cpu: 250m
+      memory: 512Mi
+
+replicant:
+  replicas: 7
+  resources:
+    requests:
+      cpu: 250m
+      memory: 1Gi
+
+serviceTypes:
+  dashboard: LoadBalancer
+  listener: LoadBalancer
